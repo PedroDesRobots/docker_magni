@@ -12,7 +12,6 @@ echo "Running magni:gazebo image"
 docker run \
   -it \
   -p 8888:8888 \
-  -w /home/user \
   --privileged=true \
   --net=host \
   --volume=/tmp/.X11-unix:/tmp/.X11-unix:rw \
@@ -28,8 +27,8 @@ docker run \
   --env="USER_UID=${USER_UID}" \
   --env="USER_GID=${USER_GID}" \
   --env="DISPLAY=${DISPLAY}" \
-  --env="QT_X11_NO_MITSHM=1"
-  --name=magni_ubiquity \
+  --env="QT_X11_NO_MITSHM=1" \
+  --name=magni_ubiquity_test \
   magni:gazebo /bin/bash
 
 export containerId='docker ps -l -q'
