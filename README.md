@@ -1,5 +1,5 @@
 # docker_magni
-a docker image for simulate a magni robot from ubiquity robotics trough gazebo.
+a docker image for simulate a magni robot from ubiquity robotics trough gazebo. This project is under [MIT](https://mit-license.org/) License.
 
 # Install Docker
 
