@@ -31,8 +31,20 @@ docker pull
 
 ```
 sudo chmod +x run_magni_gazebo.sh
-./magni_gazebo.sh
+./run_magni_gazebo.sh
 ```
+If you are using a Nvidia GPU :
+you should had these line, with ´XXX´ your nvidia driver version:
+
+```
+  --volume=/usr/lib/nvidia-XXX:/usr/lib/nvidia-XXX \
+  --volume=/usr/lib32/nvidia-XXX:/usr/lib32/nvidia-XXX \
+```
+Execute this command outside of your container to authorize your X host server (unsecure way) :
+```
+xhost +
+```
+If you to want to know more about this issue [ROS Docker GUI](http://wiki.ros.org/docker/Tutorials/GUI)
 
 # Build manually your Docker :  
 
